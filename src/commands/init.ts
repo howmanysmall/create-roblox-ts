@@ -66,6 +66,9 @@ const packageManagerCommands: {
 		// Sorry, this is a hack for now
 		// bun init always creates the extra files when we really just want
 		// package.json. ):
+
+		// Bun also only currently supports Linux, so we'll just assume
+		// rm -rf will work.
 		init: "bun init -y && rm -rf index.ts .gitignore tsconfig.json README.md",
 		devInstall: "bun install --silent -d",
 		build: "bun run build",
