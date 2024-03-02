@@ -63,7 +63,10 @@ const packageManagerCommands: {
 		build: "pnpm run build",
 	},
 	[PackageManager.Bun]: {
-		init: "npm init -y",
+		// Sorry, this is a hack for now
+		// bun init always creates the extra files when we really just want
+		// package.json. ):
+		init: "bun init -y && rm -rf index.ts .gitignore tsconfig.json README.md",
 		devInstall: "bun install --silent -d",
 		build: "bun run build",
 	},
