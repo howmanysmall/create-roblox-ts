@@ -63,7 +63,7 @@ const packageManagerCommands: {
 		build: "pnpm run build",
 	},
 	[PackageManager.Bun]: {
-		init: "bun init",
+		init: "npm init -y",
 		devInstall: "bun install --silent -d",
 		build: "bun run build",
 	},
